@@ -6,7 +6,7 @@
 /*   By: kfu <kfu@student.codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/15 12:21:49 by kfu           #+#    #+#                 */
-/*   Updated: 2020/11/25 10:33:59 by kfu           ########   odam.nl         */
+/*   Updated: 2020/11/27 15:09:50 by kfu           ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	slen = ft_strlen(s);
 	tmp = (char *)malloc(len + 1);
-	i = 0;
 	if (!tmp)
 		return (NULL);
+	i = 0;
 	while (i < len && start + i <= slen)
 	{
 		tmp[i] = s[start + i];
@@ -36,7 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str)
+	while (*str && str)
 	{
 		if (*str == (char)c)
 			return ((char *)str);
